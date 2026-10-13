@@ -6,7 +6,7 @@
   "author": "Developer",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win portable nsis"
+    "dist": "electron-builder --win portable nsis --publish never"
   },
   "devDependencies": {
     "electron": "^33.0.0",
