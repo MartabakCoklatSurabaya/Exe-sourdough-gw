@@ -1,0 +1,24 @@
+{
+  "name": "sda-indonesia",
+  "version": "1.0.0",
+  "description": "Sumber Daya Alam Indonesia - materi dan kuis interaktif",
+  "main": "main.js",
+  "author": "Developer",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable nsis"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.sda.indonesia",
+    "productName": "SDA Indonesia",
+    "files": ["main.js", "app/**/*"],
+    "directories": { "buildResources": "build", "output": "dist" },
+    "win": { "target": ["portable", "nsis"], "icon": "build/icon.png" },
+    "portable": { "artifactName": "SDA-Indonesia-portable.exe" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "artifactName": "SDA-Indonesia-Setup.exe" }
+  }
+}

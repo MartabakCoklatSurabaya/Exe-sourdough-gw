@@ -1,0 +1,36 @@
+SDA INDONESIA - VERSI WINDOWS
+=============================
+
+A. CARA CEPAT (tanpa install apa pun)
+   Klik dua kali  JALANKAN-LANGSUNG.bat
+   Aplikasi terbuka sebagai jendela sendiri lewat Microsoft Edge / Chrome.
+
+B. MEMBUAT FILE .EXE
+   1. Pasang Node.js (versi LTS) dari https://nodejs.org
+   2. Klik dua kali  BUILD-WINDOWS.bat   (butuh internet saat pertama kali)
+   3. Hasilnya ada di folder  dist\
+        SDA-Indonesia-portable.exe  -> langsung jalan, tanpa install
+        SDA-Indonesia-Setup.exe     -> installer
+
+   Kalau muncul error "Cannot create symbolic link":
+   jalankan BUILD-WINDOWS.bat sebagai Administrator, atau aktifkan
+   Developer Mode di Windows (Settings > For developers).
+
+C. MENCOBA TANPA MEMBUAT EXE
+   Di folder ini buka Command Prompt, lalu:  npm install   dan   npm start
+
+KONTROL
+   Panah kanan/kiri : slide berikutnya / sebelumnya
+   Enter            : mulai (di slide START)
+   Esc / Home       : kembali ke menu
+   F11              : layar penuh
+
+MENGGANTI SLIDE
+   Gambar ada di app\slides\ . Posisi tombol ada di bagian atas app\app.js
+   (tabel NAV dan OPTS). Tambahkan ?debug pada alamat untuk melihat kotak tombol.
+
+D. DARI HP (TANPA WINDOWS)
+   - Termux: jalankan  bash build-termux.sh  -> menghasilkan SDA-Indonesia-windows.zip
+     (folder portable, ikon exe bawaan Electron)
+   - GitHub Actions: push folder ini ke GitHub (folder .github sudah ada),
+     buka tab Actions, lalu unduh .exe dari Artifacts.
